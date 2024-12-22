@@ -7,7 +7,7 @@ jobs:
   build:
     runs-on: self-hosted
     steps:            
-    - name: "Login and do something"
+    - name: "Login and do something" #Se1f hosted agent
       uses: azure/CLI@v1
       with:
         azcliversion: 2.24.2
