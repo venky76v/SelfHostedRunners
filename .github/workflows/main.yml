@@ -1,17 +1,16 @@
 name: Azure CLI Login Tests
-on:
+on: 
   push:
-    branches: 
-      - main
+      branches:
+        - main
 jobs:
   build:
     runs-on: self-hosted
-    steps:
-    - name: "Login to Azure"
-      uses: Azure/login@v1
-    - name: "Upload Static Content to Storage"
+    steps:            
+    - name: "Login and do something"
       uses: azure/CLI@v1
       with:
         azcliversion: 2.24.2
         inlineScript: |
+          az login --identity
           az group list
